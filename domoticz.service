@@ -4,8 +4,6 @@ After=docker.service
 Requires=docker.service
 
 [Service]
-ExecStartPre=/usr/bin/etcdctl set /domoticz/%m ${COREOS_PUBLIC_IPV4}
 ExecStartPre=/usr/bin/docker pull kenayagi/domoticz
-ExecStart=/usr/bin/docker run --name domoticz --rm -p 8081:8080 -p 8443:8443 -v /srv/domoticz:/config kenayagi/domoticz
-ExecStop=/usr/bin/etcdctl rm /domoticz/%m
+ExecStart=/usr/bin/docker run --name domoticz --rm -p 8081:8080 -p 8443:8443 -v /etc/localtime:/etc/localtime -v /srv/domoticz:/config kenayagi/domoticz
 ExecStop=/usr/bin/docker stop domoticz
