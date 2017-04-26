@@ -21,7 +21,4 @@ VOLUME /config
 EXPOSE 8080
 
 # Command
-CMD ["/opt/domoticz/domoticz", "-www", "8080", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
-
-# Tag
-TAG kenayagi/domoticz:3.5877
+CMD ["/opt/domoticz/domoticz", "-www", "8080", "-sslwww", "0", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
