@@ -18,7 +18,7 @@ RUN mkdir /config
 VOLUME /config
 
 # Ports
-EXPOSE 8080 8443
+EXPOSE 8080
 
 # Command
 CMD ["/opt/domoticz/domoticz", "-www", "8080", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
