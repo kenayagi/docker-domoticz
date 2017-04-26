@@ -21,5 +21,5 @@ VOLUME /config
 EXPOSE 8080 8443
 
 # Command
-CMD ["/opt/domoticz/domoticz", "-www", "8080", "-sslwww", "8443", "-sslcert", "/config/server_cert.pem", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
+CMD ["/opt/domoticz/domoticz", "-www", "8080", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
 
