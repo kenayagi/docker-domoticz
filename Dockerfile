@@ -23,3 +23,5 @@ EXPOSE 8080
 # Command
 CMD ["/opt/domoticz/domoticz", "-www", "8080", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
 
+# Tag
+TAG kenayagi/domoticz:3.5877
