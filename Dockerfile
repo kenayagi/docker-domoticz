@@ -7,9 +7,9 @@ RUN apt-get update && apt-get -y install libssl1.0.0 libboost-thread1.55.0 libbo
 RUN rm -rf /var/lib/apt/lists/*
 
 # Get Domoticz
-ADD http://releases.domoticz.com/releases/release/domoticz_linux_x86_64.tgz /opt/
+ADD https://codeload.github.com/domoticz/domoticz/tar.gz/3.5877 /opt/
 RUN mkdir /opt/domoticz
-RUN tar xfv /opt/domoticz_linux_x86_64.tgz -C /opt/domoticz
+RUN tar xfv /opt/domoticz-3.5877.tar.gz -C /opt/domoticz
 
 # Prepare directories
 RUN mkdir /config
