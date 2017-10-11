@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 # Install dependencies
 RUN apt-get update && apt-get -y install libssl1.0.0 libboost-thread1.55.0 libboost-system1.55.0 libcurl3
