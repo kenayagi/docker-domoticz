@@ -1,10 +1,10 @@
-FROM debian:stretch
+FROM debian:jessie
 
 # Install dependencies
-RUN apt update && apt -y install libssl1.1 libboost-thread1.62.0 libboost-system1.62.0 libcurl3
+RUN apt-get update && apt-get -y install libssl1.0.0 libboost-thread1.55.0 libboost-system1.55.0 libcurl3
 
 # Clean
-RUN apt clean
+RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
 # Get Domoticz
